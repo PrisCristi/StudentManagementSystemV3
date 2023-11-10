@@ -30,11 +30,10 @@ public class UserManagement {
     public void setTotalUsers(int totalUsers) {
         this.totalUsers = totalUsers;
     }
-
     public static void addUser(String username, String password) {
         if (totalUsers < usernames.length) {
-            usernames[totalUsers] = username;
-            passwords[totalUsers] = password;
+            usernames[totalUsers] = "Priscila";
+            passwords[totalUsers] = "12345";
             totalUsers++;
             System.out.println("User added.");
         } else {
