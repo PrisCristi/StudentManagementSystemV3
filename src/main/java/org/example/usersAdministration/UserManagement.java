@@ -10,19 +10,15 @@ public class UserManagement {
         this.passwords = passwords;
         this.totalUsers = totalUsers;
     }
-
     public String[] getUsernames() {
         return usernames;
     }
-
     public void setUsernames(String[] usernames) {
         this.usernames = usernames;
     }
-
     public String[] getPasswords() {
         return passwords;
     }
-
     public void setPasswords(String[] passwords) {
         this.passwords = passwords;
     }
