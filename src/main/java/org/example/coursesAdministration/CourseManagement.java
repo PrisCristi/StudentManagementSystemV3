@@ -1,48 +1,39 @@
 package org.example.coursesAdministration;
 
+import org.example.studentsAdministration.Student;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class CourseManagement {
-    private static List<Course> couseList = new ArrayList<>();
-    public static void addCourse(String courseName, String courseId) {
-        if (courseName.isEmpty() || courseId.isEmpty()) {
-        }
-        if (courseName.contains(courseName)) {
-            System.out.println("Course already exists");
-            couseList.add(new Course(courseName, courseId));
-        } else {
-            System.out.println("New course added.");
-        }
-    }
-    public static void updateCourse(Course courseNameUpdated, Course courseId){
-        for (Course course : couseList){
-            if(course.getId().equals(courseId)){
-                course.setName(String.valueOf(courseNameUpdated));
-                System.out.println("Course updated.");
-            }else {
-                System.out.println("Course can not be updated.");
-            }
-        }
-    }
-    public static void deleteCourse(String couseId){
-        int index = 0;
-        while (index< couseList.size()){
-            Course course = couseList.get(index);
-            if (course.getId().equals(couseId)){
-                couseList.remove(index);
-                System.out.println("Course deleted.");
-            }else {
-                System.out.println("Course could not be deleted");
-            }
-        } index++;
-    }
-    public static void displayCourse(){
-        System.out.println("Course List:");
+    private Map<String, Course> courses;
 
-        for (Course course : couseList){
-            System.out.println(couseList);
-        }
+    public CourseManagement(Map<String, Course> courses) {
+        this.courses = courses;
+    }
+
+    public void addCourse(Course course) {
+        courses.put(course.getId(), course);
+        System.out.println("New course added.");
+    }
+    public void deleteCourse(Course course){
+        if (courses.remove(course.getId()) == null)
+            throw new RuntimeException("Course can not be deleted.");
+        System.out.println("Course deleted");
+    }
+    public void updateCourse(Course course){
+        if (!courses.containsKey(course.getId()))
+            throw new RuntimeException("Course not found.");
+        courses.put(course.getId(),course);
+        System.out.println("Course updated");
+
+    }
+    public void displayCourse(){
+        System.out.println("Course List:");
+        courses.values().forEach(course ->
+                System.out.println("Course name: " + course.getName() + "Course id: " + course.getId())
+        );
     }
 }
 
