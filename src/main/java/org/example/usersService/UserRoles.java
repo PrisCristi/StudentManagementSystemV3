@@ -1,4 +1,4 @@
-package org.example.usersAdministration;
+package org.example.usersService;
 
 public class UserRoles extends User{
     private String roleName;

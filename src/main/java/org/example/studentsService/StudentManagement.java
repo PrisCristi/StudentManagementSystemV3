@@ -1,6 +1,5 @@
-package org.example.studentsAdministration;
+package org.example.studentsService;
 
-import java.util.Arrays;
 import java.util.Map;
 
 public class StudentManagement {

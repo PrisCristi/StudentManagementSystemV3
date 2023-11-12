@@ -1,6 +1,6 @@
 package org.example.gradingSystem;
-import org.example.coursesAdministration.Course;
-import org.example.studentsAdministration.Student;
+import org.example.coursesService.Course;
+import org.example.studentsService.Student;
 
 public class Enrollment {
     private double grade;

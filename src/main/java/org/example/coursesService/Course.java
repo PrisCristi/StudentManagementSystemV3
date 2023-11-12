@@ -1,4 +1,4 @@
-package org.example.coursesAdministration;
+package org.example.coursesService;
 
 import java.util.List;
 

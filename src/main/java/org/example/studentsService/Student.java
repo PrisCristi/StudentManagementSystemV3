@@ -1,6 +1,5 @@
-package org.example.studentsAdministration;
+package org.example.studentsService;
 
-import org.example.coursesAdministration.Course;
 import org.example.gradingSystem.Enrollment;
 
 import java.util.List;

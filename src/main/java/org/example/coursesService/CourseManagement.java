@@ -1,9 +1,5 @@
-package org.example.coursesAdministration;
+package org.example.coursesService;
 
-import org.example.studentsAdministration.Student;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class CourseManagement {
@@ -12,7 +8,6 @@ public class CourseManagement {
     public CourseManagement(Map<String, Course> courses) {
         this.courses = courses;
     }
-
     public void addCourse(Course course) {
         courses.put(course.getId(), course);
         System.out.println("New course added.");
@@ -27,7 +22,6 @@ public class CourseManagement {
             throw new RuntimeException("Course not found.");
         courses.put(course.getId(),course);
         System.out.println("Course updated");
-
     }
     public void displayCourse(){
         System.out.println("Course List:");
