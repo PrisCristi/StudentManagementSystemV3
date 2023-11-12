@@ -1,12 +1,7 @@
 package org.example.coursesAdministration;
 
-import org.example.studantsAdministration.Student;
-
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-import static org.example.studantsAdministration.StudentManagement.getStudentId;
 public class Course {
     private String courseName;
     private String courseId;
