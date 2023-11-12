@@ -5,7 +5,6 @@ import java.util.List;
 
 public class CourseManagement {
     private static List<Course> couseList = new ArrayList<>();
-
     public static void addCourse(String courseName, String courseId) {
         if (courseName.isEmpty() || courseId.isEmpty()) {
         }
@@ -18,8 +17,8 @@ public class CourseManagement {
     }
     public static void updateCourse(Course courseNameUpdated, Course courseId){
         for (Course course : couseList){
-            if(course.getCourseId().equals(courseId)){
-                course.setCourseName(String.valueOf(courseNameUpdated));
+            if(course.getId().equals(courseId)){
+                course.setName(String.valueOf(courseNameUpdated));
                 System.out.println("Course updated.");
             }else {
                 System.out.println("Course can not be updated.");
@@ -30,7 +29,7 @@ public class CourseManagement {
         int index = 0;
         while (index< couseList.size()){
             Course course = couseList.get(index);
-            if (course.getCourseId().equals(couseId)){
+            if (course.getId().equals(couseId)){
                 couseList.remove(index);
                 System.out.println("Course deleted.");
             }else {

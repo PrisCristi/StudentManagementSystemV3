@@ -3,8 +3,8 @@ package org.example.coursesAdministration;
 import java.util.List;
 
 public class Course {
-    private String courseName;
-    private String courseId;
+    private String name;
+    private String id;
     private static List<String> enrolledStudents;
     private double grade;
 
@@ -24,20 +24,20 @@ public class Course {
 
     }
 
-    public String getCourseName() {
-        return courseName;
+    public String getName() {
+        return name;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCourseId() {
-        return courseId;
+    public String getId() {
+        return id;
     }
 
-    public void setCourseId(String courseId) {
-        this.courseId = courseId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public List<String> getEnrolledStudents() {

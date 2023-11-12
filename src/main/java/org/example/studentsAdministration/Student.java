@@ -1,20 +1,21 @@
 package org.example.studentsAdministration;
 
 import org.example.coursesAdministration.Course;
+import org.example.gradingSystem.Enrollment;
 
 import java.util.List;
 
 public class Student {
     private String name;
     private String id;
-    private List<Course> enrolledcourses;
+    private List<Enrollment> enrollments;
 
     public Student(String name, String studentId) {
         this.name = name;
         this.id = studentId;
     }
-    public Student(List<Course> enroledCourses) {
-        this.enrolledcourses = enrolledcourses;
+    public Student(List<Enrollment> enrollments) {
+        this.enrollments = enrollments;
     }
 
     public String getName() {
@@ -33,11 +34,11 @@ public class Student {
         this.id = id;
     }
 
-    public List<Course> getEnroledCourses() {
-        return enrolledcourses;
+    public List<Enrollment> getEnrollments() {
+        return enrollments;
     }
 
-    public void setEnroledCourses(List<Course> enroledCourses) {
-        this.enrolledcourses = enrolledcourses;
+    public void setEnroledCourses(List<Enrollment> enrollments) {
+        this.enrollments = enrollments;
     }
 }
